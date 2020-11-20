@@ -7,12 +7,14 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'build'),
+        publicPath: '/',
         filename: 'bundle.js',
     },
     resolve: {
         extensions: ['.js', '.json', '.jsx'],
     },
     devServer: {
+        open: true,
         contentBase: path.resolve(__dirname, 'build'),
     },
     module: {
@@ -32,15 +34,27 @@ module.exports = {
                 use: ['style-loader', 'sass-loader'],
             },
             {
+                test: /\.(eot|otf|ttf|woff|woff2)$/,
+                use: 'file-loader',
+            },
+            {
                 test: /\.(png|jpg|gif|svg|ico)$/i,
                 use: ['url-loader', 'file-loader']
             },
+            {
+                test: /\.(mp4|webm)$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000,
+                    },
+                },
+            }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html',
-            filename: './index.html'
         })
     ]
 };
