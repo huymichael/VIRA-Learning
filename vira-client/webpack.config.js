@@ -22,7 +22,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: ['babel-loader']
+                use: ['babel-loader'],
             },
             {
                 test: /\.css$/,
@@ -31,15 +31,24 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 exclude: /node_modules/,
-                use: ['style-loader', 'sass-loader'],
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
                 test: /\.(eot|otf|ttf|woff|woff2)$/,
-                use: 'file-loader',
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                },
             },
             {
                 test: /\.(png|jpg|gif|svg|ico)$/i,
-                use: ['url-loader', 'file-loader']
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                        },
+                    }],
             },
             {
                 test: /\.(mp4|webm)$/,
@@ -49,12 +58,12 @@ module.exports = {
                         limit: 10000,
                     },
                 },
-            }
-        ]
+            },
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html',
-        })
-    ]
+        }),
+    ],
 };
