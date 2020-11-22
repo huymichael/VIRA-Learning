@@ -11,7 +11,7 @@ module.exports = {
         filename: 'bundle.js',
     },
     resolve: {
-        extensions: ['.js', '.json', '.jsx'],
+        extensions: ['.js', '.jsx', '.json'],
     },
     devServer: {
         open: true,
@@ -19,6 +19,10 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.html$/,
+                use: ['html-loader'],
+            },
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
@@ -37,7 +41,7 @@ module.exports = {
                 test: /\.(eot|otf|ttf|woff|woff2)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[path][name].[ext]',
+                    name: '[path][name][hash].[ext]',
                 },
             },
             {
@@ -46,9 +50,10 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[path][name].[ext]',
+                            name: '[path][name][hash].[ext]',
                         },
-                    }],
+                    },
+                ],
             },
             {
                 test: /\.(mp4|webm)$/,
