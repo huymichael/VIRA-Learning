@@ -1,0 +1,34 @@
+//@font-face {
+//  font-family: 'Proxima Nova';
+//  src: url("../../fonts/Proxima Nova Regular.otf") format('otf');
+//}
+
+//@font-face {
+//  font-family: 'Proxima Light';
+//  src: url("../../fonts/Proxima Nova Thin.otf") format('otf');
+//}
+//
+//@font-face {
+//  font-family: 'Proxima Italic';
+//  src: url("../../fonts/Proxima Nova Italic.otf") format('otf');
+//}
+//
+//@font-face {
+//  font-family: 'Proxima Bold';
+//  src: url("../../fonts/Proxima Nova Bold.otf") format('otf');
+//}
+
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+
+body {
+  background-color: coral;
+  color: black;
+  box-sizing: border-box;
+}
