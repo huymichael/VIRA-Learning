@@ -1,23 +1,4 @@
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url("../fonts/Proxima Nova Regular.otf") format('otf');
-}
-
-@font-face {
-  font-family: 'Proxima Light';
-  src: url("../fonts/Proxima Nova Thin.otf") format('otf');
-}
-
-@font-face {
-  font-family: 'Proxima Italic';
-  src: url("../fonts/Proxima Nova Italic.otf") format('otf');
-}
-
-@font-face {
-  font-family: 'Proxima Bold';
-  src: url("../fonts/Proxima Nova Bold.otf") format('otf');
-}
-
+@import "common/base";
 
 *, *:before, *:after {
   margin: 0;
@@ -33,4 +14,3 @@ body {
   box-sizing: border-box;
 }
 
-@import "./base/base";

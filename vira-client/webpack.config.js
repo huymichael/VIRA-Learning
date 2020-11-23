@@ -1,9 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    mode: 'development',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -12,9 +12,13 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json'],
+        modules: [
+            path.resolve(__dirname, 'src'),
+            'node_modules',
+        ],
     },
     devServer: {
-        open: true,
+        // open: true,
         contentBase: path.resolve(__dirname, 'build'),
     },
     module: {
@@ -34,7 +38,6 @@ module.exports = {
             },
             {
                 test: /\.s[ac]ss$/i,
-                exclude: /node_modules/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
@@ -67,6 +70,7 @@ module.exports = {
         ],
     },
     plugins: [
+        new CleanWebpackPlugin,
         new HtmlWebpackPlugin({
             template: './public/index.html',
         }),
