@@ -1,22 +1,22 @@
 @font-face {
   font-family: 'Proxima Nova';
-  src: url("fonts/Proxima Nova Regular.otf") format('otf');
+  src: url("../fonts/Proxima Nova Regular.otf") format('otf');
 }
 
-//@font-face {
-//  font-family: 'Proxima Light';
-//  src: url("../../fonts/Proxima Nova Thin.otf") format('otf');
-//}
-//
-//@font-face {
-//  font-family: 'Proxima Italic';
-//  src: url("../../fonts/Proxima Nova Italic.otf") format('otf');
-//}
-//
-//@font-face {
-//  font-family: 'Proxima Bold';
-//  src: url("../../fonts/Proxima Nova Bold.otf") format('otf');
-//}
+@font-face {
+  font-family: 'Proxima Light';
+  src: url("../fonts/Proxima Nova Thin.otf") format('otf');
+}
+
+@font-face {
+  font-family: 'Proxima Italic';
+  src: url("../fonts/Proxima Nova Italic.otf") format('otf');
+}
+
+@font-face {
+  font-family: 'Proxima Bold';
+  src: url("../fonts/Proxima Nova Bold.otf") format('otf');
+}
 
 
 *, *:before, *:after {
@@ -28,6 +28,7 @@
 }
 
 body {
+  font-family: 'Proxima Nova', 'Proxima Bold', serif;
   background-color: coral;
   color: black;
   box-sizing: border-box;
