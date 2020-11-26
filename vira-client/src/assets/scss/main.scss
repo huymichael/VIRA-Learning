@@ -1,15 +1,16 @@
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url("../fonts/Proxima Nova Regular.otf") format('otf');
-  }
+@import "common/base";
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
 
 body {
   background-color: coral;
   color: black;
   box-sizing: border-box;
-  }
+}
 
-.App {
-  background-color: coral;
-
-  }
