@@ -1,16 +1,4 @@
+//COMMON SETTING
+@import "common/font";
 @import "common/base";
-
-*, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-
-}
-
-body {
-  background-color: coral;
-  color: black;
-  box-sizing: border-box;
-}
-
+@import "common/color";
