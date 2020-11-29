@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -43,8 +43,16 @@ module.exports = {
                     //     ? "style-loader"
                     //     : MiniCssExtractPlugin.loader,
                     MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader"
+                    'css-loader',
+                    'sass-loader',
+                    {
+                        loader: 'sass-resources-loader',
+                        options: {
+                            resources: [
+                                path.resolve(__dirname, 'src/assets/scss/common/_color.scss'),
+                            ],
+                        },
+                    },
                 ],
             },
             {
@@ -100,8 +108,8 @@ module.exports = {
             },
         }),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css",
+            filename: '[name].css',
+            chunkFilename: '[id].css',
         }),
     ],
     resolve: {
