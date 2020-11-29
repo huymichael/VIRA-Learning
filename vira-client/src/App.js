@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from 'assets/icons/logo.svg';
 import logo2 from 'assets/images/logo.png';
-import './App.css';
+import './App.scss';
+// import 'assets/scss/main.scss';
 import Test from 'views/test';
 
 function App() {

@@ -1,7 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const webpack = require('webpack');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -22,12 +24,28 @@ module.exports = {
                 use: ['html-loader'],
             },
             {
+                // Preprocess our own .css files
+                // This is the place to add your own loaders (e.g. sass/less etc.)
                 test: /\.css$/,
+                exclude: /node_modules/,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                // Preprocess 3rd party .css files located in node_modules
+                test: /\.css$/,
+                include: /node_modules/,
                 use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
+                use: [
+                    // process.env.NODE_ENV !== "production"
+                    //     ? "style-loader"
+                    //     : MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
+                ],
             },
             {
                 test: /\.(eot|otf|ttf|woff|woff2)$/,
@@ -80,6 +98,10 @@ module.exports = {
                 collapseWhitespace: true,
                 removeAttributeQuotes: true,
             },
+        }),
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css",
         }),
     ],
     resolve: {
