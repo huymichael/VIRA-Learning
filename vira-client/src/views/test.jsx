@@ -4,7 +4,7 @@ const Test = () => (
     <>
         <div className='testPage'>
             <p>
-                Test component
+                Test component hihi
             </p>
         </div>
     </>

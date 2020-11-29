@@ -1,35 +1,23 @@
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url("assets/fonts/Proxima Nova Regular.otf") format('otf');
-}
 
-@font-face {
-  font-family: 'Proxima Light';
-  src: url("assets/fonts/Proxima Nova Thin.otf") format('otf');
-}
-
-@font-face {
-  font-family: 'Proxima Italic';
-  src: url("assets/fonts/Proxima Nova Italic.otf") format('otf');
-}
-
-@font-face {
-  font-family: 'Proxima Bold';
-  src: url("assets/fonts/Proxima Nova Bold.otf") format('otf');
-}
-
-
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
   box-sizing: border-box;
-
-
 }
 
 body {
-  font-family: 'Proxima Nova', 'Proxima Bold', serif;
-  background-color: coral;
-  color: black;
-  box-sizing: border-box;
+  font-family: 'Proxima Nova', 'Roboto', serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: $grey-background;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  min-height: 100vh;
 }

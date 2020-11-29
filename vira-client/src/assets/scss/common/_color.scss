@@ -1,8 +1,13 @@
-:root {
-  --main-bg-color: #FF8A00;
-  --secondary-bg-color: #FFC000;
-  --grey: #5C5C5C
-}
+//:root {
+//  --main-bg-color: #FF8A00;
+//  --secondary-bg-color: #FFC000;
+//  --grey: #5C5C5C
+//}
+
+$main-bg-color: #FF8A00;
+$secondary-bg-color: #FFC000;
+$solid-grey: #5C5C5C;
+
 
 $grey00: #FFFFFF;
 $grey10: #F3F3F4;
@@ -15,5 +20,4 @@ $grey70: #5F6163;
 $grey80: #444647;
 $grey90: #292A2A;
 $grey100: #0E0E0E;
-
-$gray-background: #F5F5F5;
+$grey-background: #F5F5F5;
