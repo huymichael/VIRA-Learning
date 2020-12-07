@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Michael';
+  src: local('Michael') url("./assets/fonts/roboto/Roboto_Regular.ttf") format('ttf') ;
+}
+
+@font-face {
+  font-family: 'mj';
+  src: url("./assets/fonts/proxima-nova.otf") format('otf') ;
+}
+
+.michael-test {
+  font-family: 'Michael';
+}
+
+.michael-test2 {
+  font-family: 'mj';
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    /*animation: App-logo-spin infinite 20s linear;*/
+    margin-bottom: 20px;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
