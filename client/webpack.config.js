@@ -40,6 +40,7 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
+                // type: 'asset/resource',
                 use: [
                     {
                         loader: 'svg-url-loader',
@@ -54,6 +55,7 @@ module.exports = {
             },
             {
                 test: /\.(png|ico|jpg|jpeg|gif)$/i,
+                // type: 'asset/resource',
                 use: [
                     {
                         loader: 'file-loader',
@@ -71,8 +73,8 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'assets/fonts/',
-                        },
+                            outputPath: 'fonts/'
+                        }
                     },
                 ],
             },

@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.scss';
 import iconSVG from './assets/icons/logo.svg';
 import imagePNG from './assets/images/logo.png';
 import './assets/scss/main.scss';

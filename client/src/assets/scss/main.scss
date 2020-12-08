@@ -1,18 +1,27 @@
 //COMMON SETTING
-//@import "common/font";
-//@import "common/base";
+@import "common/font";
+@import "common/base";
 @import "common/color";
 
-//@font-face {
-//  font-family: 'Proxima';
-//  src: url("../fonts/proxima/Proxima_Nova_Regular.otf") format("otf");
-//}
-//
-//@font-face {
-//  font-family: 'Roboto';
-//  src: url("../fonts/roboto/Roboto_Regular.ttf") format("ttf");
-//}
+.App {
+  text-align: center;
+}
 
-body {
-  font-family: 'Proxima', 'Roboto';
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
 }
