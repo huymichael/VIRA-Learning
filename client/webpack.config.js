@@ -35,8 +35,9 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader,
 
                     },
-                    'css-loader',
-                    'sass-loader'],
+                    {loader: 'css-loader', options: {sourceMap: true, importLoaders: 1}},
+                    {loader: 'postcss-loader', options: {sourceMap: true}},
+                    {loader: 'sass-loader', options: {sourceMap: true}},],
             },
             {
                 test: /\.svg$/,
@@ -46,7 +47,7 @@ module.exports = {
                         loader: 'svg-url-loader',
                         options: {
                             // Inline files smaller than 20 kB
-                            // limit: 20 * 1024,
+                            limit: 20 * 1024,
                             name: '[name].[ext]',
                             outputPath: 'assets/images/',
                         },
@@ -73,7 +74,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'fonts/'
+                            outputPath: 'assets/fonts/'
                         }
                     },
                 ],
@@ -82,9 +83,11 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json'],
+        modules: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules')],
     },
     devServer: {
         contentBase: './build',
+        open: true,
     },
     plugins: [
         new CleanWebpackPlugin(),

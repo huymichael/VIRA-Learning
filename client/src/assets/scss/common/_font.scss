@@ -1,40 +1,42 @@
+$font_path: 'assets/fonts/';
+
 @font-face {
   font-family: 'Proxima Nova';
-  src: url("../fonts/proxima/Proxima_Nova_Regular.otf") format('otf');
+  src: url($font_path + "proxima/Proxima_Nova_Regular.otf") format('opentype');
 }
 
 @font-face {
   font-family: 'Proxima Light';
-  src: url("../fonts/proxima/Proxima_Nova_Thin.otf") format('otf');
+  src: url($font_path +  "proxima/Proxima_Nova_Thin.otf") format('opentype');
 }
 
 @font-face {
   font-family: 'Proxima Italic';
-  src: url("../fonts/proxima/Proxima_Nova_Italic.otf") format('otf');
+  src: url($font_path + "proxima/Proxima_Nova_Italic.otf") format('opentype');
 }
 
 @font-face {
   font-family: 'Proxima Bold';
-  src: url("../fonts/proxima/Proxima_Nova_Bold.otf") format('otf');
+  src: url($font_path + "proxima/Proxima_Nova_Bold.otf") format('opentype');
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/roboto/Roboto_Regular.ttf") format('ttf');
+  src: url($font_path + "roboto/Roboto_Regular.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto Light';
-  src: url("../fonts/roboto/Roboto_Light.ttf") format('ttf');
+  src: url($font_path + "roboto/Roboto_Light.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto Italic';
-  src: url("../fonts/roboto/Roboto_Italic.ttf") format('ttf');
+  src: url($font_path + "roboto/Roboto_Italic.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto Bold';
-  src: url("../fonts/roboto/Roboto_Bold.ttf") format('ttf');
+  src: url($font_path + "roboto/Roboto_Bold.ttf") format('truetype');
 }
 
