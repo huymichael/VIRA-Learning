@@ -12,7 +12,7 @@ function App() {
                 <img src={iconSVG} className="App-logo" alt="iconSVG"/>
                 <img src={imagePNG} className="App-logo" alt="imagePNG"/>
                 <p>
-                    Edit <code>src/App.js</code> and save to reload.
+                    Edit <code>src/App.js</code> and save to reload
                 </p>
                 <p className='michael-test'>Michael test font</p>
                 <p className='michael-test2'>Michael test font 2</p>
