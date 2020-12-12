@@ -1,0 +1,42 @@
+$font_path: 'assets/fonts/';
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url($font_path + "proxima/Proxima_Nova_Regular.otf") format('opentype');
+}
+
+@font-face {
+  font-family: 'Proxima Light';
+  src: url($font_path +  "proxima/Proxima_Nova_Thin.otf") format('opentype');
+}
+
+@font-face {
+  font-family: 'Proxima Italic';
+  src: url($font_path + "proxima/Proxima_Nova_Italic.otf") format('opentype');
+}
+
+@font-face {
+  font-family: 'Proxima Bold';
+  src: url($font_path + "proxima/Proxima_Nova_Bold.otf") format('opentype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url($font_path + "roboto/Roboto_Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url($font_path + "roboto/Roboto_Light.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Italic';
+  src: url($font_path + "roboto/Roboto_Italic.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url($font_path + "roboto/Roboto_Bold.ttf") format('truetype');
+}
+
