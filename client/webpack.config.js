@@ -41,7 +41,7 @@ module.exports = (webpackEnv, argv) => {
                     use: [
                         {loader: MiniCssExtractPlugin.loader},
                         {loader: 'css-loader'},
-                        {loader: 'postcss-loader'},
+                        // {loader: 'postcss-loader'},
                         {loader: 'sass-loader'}],
                 },
                 {
@@ -106,7 +106,7 @@ module.exports = (webpackEnv, argv) => {
             new HtmlWebpackPlugin({
                 template: './public/index.html',
                 filename: './index.html',
-                favicon: './public/favicon.ico',
+                favicon: './public/icons/favicon.ico',
             }),
         ],
         watchOptions: {

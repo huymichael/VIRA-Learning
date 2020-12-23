@@ -1,13 +1,28 @@
+import {ThemeProvider} from '@material-ui/core';
+import 'assets/scss/main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
+import viraTheme from 'utils/themes/viraTheme.jsx';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+const MOUNT_NODE = document.getElementById('vira-app');
+
+const Vira = () => (
     <React.StrictMode>
-        <App/>
-    </React.StrictMode>,
-    document.getElementById('root'),
+        <ThemeProvider theme={viraTheme}>
+            <BrowserRouter>
+                <App/>
+            </BrowserRouter>
+        </ThemeProvider>
+    </React.StrictMode>
+
+);
+
+ReactDOM.render(
+    <Vira/>,
+    MOUNT_NODE,
 );
 
 // If you want to start measuring performance in your app, pass a function
