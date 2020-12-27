@@ -1,13 +1,15 @@
-import React from 'react';
-import {Link,useHistory} from 'react-router-dom';
-import Routing from 'routes/routers.js';
+import React, {Suspense} from 'react';
+import {Link, useHistory} from 'react-router-dom';
+import AppRoute from 'router/routes.js';
+import {RouteHelper} from 'utils/helper/routeHelper.js';
+
 
 const App = () => {
     let history = useHistory();
 
-    const onClick=()=>{
+    const onClick = () => {
         history.push('/');
-    }
+    };
     return (
         <>
             <main>
@@ -28,7 +30,11 @@ const App = () => {
                     </ul>
                 </div>
             </main>
-            <Routing/>
+            <Suspense fallback={<div>Loading...</div>}>
+                {
+                    AppRoute().map(route => RouteHelper.createRoute(route))
+                }
+            </Suspense>
         </>
     );
 };
