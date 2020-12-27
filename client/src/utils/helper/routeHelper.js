@@ -7,7 +7,7 @@ const createPublicRoute = (route) => {
     const {path, children} = route;
     return (
         <Switch>
-            <Route path={path}>
+            <Route  exact path={path}>
                 <Redirect to={`${siteLink.auth.login}`}/>
             </Route>
             {
@@ -15,8 +15,7 @@ const createPublicRoute = (route) => {
                     <Route key={route.path}
                            exact={route.exact}
                            path={route.path}
-                           component={route.component}>
-                    </Route>)
+                           component={route.component}/>)
             }
         </Switch>
     );
@@ -26,6 +25,7 @@ const createPublicRoute = (route) => {
 const createRoute = (route) => {
     const {isPrivate} = route;
     if (!isPrivate) {
+        console.log(createPublicRoute(route))
         return createPublicRoute(route);
     }
 };
