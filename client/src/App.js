@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import {Link, useHistory} from 'react-router-dom';
-import AppRoute from 'router/routes.js';
-import {RouteHelper} from 'utils/helper/routeHelper.js';
+import AppRoute from 'router/routes';
+import {RouteHelper} from 'utils/helper/routeHelper';
 
 
 const App = () => {

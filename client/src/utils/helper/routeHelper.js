@@ -1,10 +1,7 @@
-import React, {lazy} from 'react';
+import React from 'react';
 import {Redirect, Route, Switch} from 'react-router-dom';
-import {siteLink} from 'utils/constants/siteLink.js';
+import {siteLink} from 'utils/constants/siteLink';
 
-const lazyImport = (componentUrl) => {
-    return (lazy(() => import(componentUrl)));
-};
 
 const createPublicRoute = (route) => {
     const {path, children} = route;
@@ -34,6 +31,5 @@ const createRoute = (route) => {
 };
 
 export const RouteHelper = {
-    lazyImport,
     createRoute,
 };

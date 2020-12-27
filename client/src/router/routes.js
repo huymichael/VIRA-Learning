@@ -1,5 +1,5 @@
 import React, {lazy} from 'react';
-import {siteLink} from 'utils/constants/siteLink.js';
+import {siteLink} from 'utils/constants/siteLink';
 
 // const Login = RouteHelper.lazyImport('../views/pages/Auth/Login');
 // const SignUp = RouteHelper.lazyImport('../views/pages/Auth/SignUp');
