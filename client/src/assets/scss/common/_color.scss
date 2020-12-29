@@ -1,0 +1,18 @@
+:root {
+  --main: #{$main-color};
+  --secondary: #{$secondary-color};
+  --dark-grey: #{$dark-grey};
+  --body-background: #{$body-background};
+
+  //SHADES COLOR
+  --grey-20: #{$grey-20};
+  --grey-40: #{$grey-40};
+  --grey-60: #{$grey-60};
+  --grey-80: #{$grey-80};
+
+  //COMMON COLOR
+  --white: #{$white};
+  --green: #{$green};
+  --error: #{$error};
+}
+
