@@ -1,7 +1,10 @@
-import React, {Suspense} from 'react';
-import {Link, useHistory} from 'react-router-dom';
-import AppRoute from 'router/routes';
-import {RouteHelper} from 'utils/helper/routeHelper';
+import React, {lazy, Suspense} from 'react';
+import {Link, Redirect, Route, Switch, useHistory} from 'react-router-dom';
+import {AppRoutes} from 'router/routes.js';
+import {siteLink} from 'utils/constants/siteLink.js';
+import {RouteHelper} from 'utils/helper/routeHelper.js';
+
+const NotFound = lazy(() => import('views/pages/NotFound/NotFound'));
 
 
 const App = () => {
@@ -31,9 +34,15 @@ const App = () => {
                 </div>
             </main>
             <Suspense fallback={<div>Loading...</div>}>
-                {
-                    AppRoute().map(route => RouteHelper.createRoute(route))
-                }
+                <Switch>
+                    <Route exact path={siteLink.rootPath}>
+                        <Redirect to={`${siteLink.auth.login}`}/>
+                    </Route>
+                    {
+                        AppRoutes().map(route => RouteHelper.createRoute(route))
+                    }
+                    <Route component={NotFound}/>
+                </Switch>
             </Suspense>
         </>
     );

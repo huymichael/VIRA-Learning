@@ -1,4 +1,5 @@
 export const siteLink = {
+    rootPath: '/',
     auth: {
         prefix: '/auth',
         login: '/login',

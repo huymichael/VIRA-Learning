@@ -1,33 +1,20 @@
+import AuthLayout from 'HOC/layout/AuthLayout';
+import MainLayout from 'HOC/layout/MainLayout';
 import React from 'react';
-import {Redirect, Route, Switch} from 'react-router-dom';
-import {siteLink} from 'utils/constants/siteLink';
-
-
-const createPublicRoute = (route) => {
-    const {path, children} = route;
-    return (
-        <Switch>
-            <Route  exact path={path}>
-                <Redirect to={`${siteLink.auth.login}`}/>
-            </Route>
-            {
-                children.map(route =>
-                    <Route key={route.path}
-                           exact={route.exact}
-                           path={route.path}
-                           component={route.component}/>)
-            }
-        </Switch>
-    );
-};
-
+import {Route} from 'react-router-dom';
 
 const createRoute = (route) => {
-    const {isPrivate} = route;
-    if (!isPrivate) {
-        console.log(createPublicRoute(route))
-        return createPublicRoute(route);
-    }
+    const {exact, path, isPrivate} = route;
+    const RouteComponent = route.component;
+    const Layout = !isPrivate ? AuthLayout : MainLayout;
+    return <Route key={path}
+                  exact={exact}
+                  path={path}
+                  render={props => (
+                      <Layout>
+                          <RouteComponent {...props}/>
+                      </Layout>)}
+    />;
 };
 
 export const RouteHelper = {

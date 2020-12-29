@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AuthLayout = (props) => {
+const MainLayout = (props) => {
     const {children: Children, ...rest} = props;
     return (
         <React.Fragment>
@@ -9,5 +9,4 @@ const AuthLayout = (props) => {
         </React.Fragment>);
 };
 
-
-export default AuthLayout;
+export default MainLayout;

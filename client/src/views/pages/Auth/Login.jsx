@@ -1,6 +1,7 @@
 import React from 'react';
 
-const LoginPage = () => {
+const LoginPage = (props) => {
+    console.log(props);
     return (
         <>
             <main>
